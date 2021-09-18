@@ -13,3 +13,11 @@ function alienLanguage(str){
   
 }
 
+
+function fiveLine(s){
+let res = s.trim();
+  for (let i = 2; i <= 5; i++) {
+    res += '\n' + s.trim().repeat(i);
+  }
+  return res;
+}
