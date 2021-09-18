@@ -15,3 +15,17 @@ function notEqual(bs, as){
   }
   //=
 
+function process2Arrays(a, b) {
+  
+
+  const sameOfArrs = a.filter(el => b.indexOf(el) !== -1);
+  const uniqForFirstArr = a.filter(el => sameOfArrs.indexOf(el) === -1);
+  const uniqForSecondArr = b.filter(el => sameOfArrs.indexOf(el) === -1);
+  
+
+  return [sameOfArrs.length,
+         [...uniqForFirstArr, ...uniqForSecondArr].length,
+         uniqForFirstArr.length,
+         uniqForSecondArr.length];
+  
+}
