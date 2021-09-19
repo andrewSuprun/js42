@@ -29,3 +29,16 @@ function process2Arrays(a, b) {
          uniqForSecondArr.length];
   
 }
+
+or
+const process2Arrays = (arr1, arr2) => {
+  const sameOfArr = arr1.filter((el, i, arr) => {
+    if (el !== arr[i + 1]) return arr2.includes(el);
+  }).length;
+  const a = new Set(arr1).size;
+  const b = new Set(arr2).size;
+  const uniqOfArrs = a + b - 2 * sameOfArr;
+  const arr1Remain = a - sameOfArr;
+  const arr2Remain = b - sameOfArr;
+  return [sameOfArr, uniqOfArrs, arr1Remain, arr2Remain];
+};
