@@ -5,7 +5,7 @@ Automorphic number https://www.codewars.com/kata/5a58d889880385c2f40000aa
 
 
 function correctTail(bod, tail) {
-  return bod[bod.length-1] === tail
+  return bod[bod.length-1] === tail;
 }
 
 function bonusTime(salary, bonus) {
@@ -18,5 +18,5 @@ function automorphic(n){
   const str = n.toString();
   const sqr = (n*n).toString();
   if(sqr.includes(str) && typeof n === 'number') return "Automorphic";
-  return 'Not!!'
+  return 'Not!!';
   }
