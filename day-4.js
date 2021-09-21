@@ -18,12 +18,12 @@
 
 
 #10 function pickIt(arr){
-  var odd=[],even=[];
-  for(let i=0; i<arr.length; i++){
-    const number = arr[i]
+ const odd = [], even=[];
+  for (let i=0; i<arr.length; i++) {
+    const number = arr[i];
+    
     if (number%2==0) even.push(number)
     else odd.push(number)
-//     odd.push(number)
   }
   
   
@@ -31,9 +31,9 @@
 }
 
 #11 function grabDoll(dolls){
-  var bag=[];
+  const bag=[];
   
-  for(var i = 0; i < dolls.length; i++) {
+  for(let i = 0; i < dolls.length; i++) {
   
     if(dolls[i] === "Hello Kitty" || dolls[i] === "Barbie doll")
       bag.push(dolls[i]);
@@ -48,13 +48,11 @@
 
 #12 function giveMeFive(obj){
  const result = [];
-  for (let key in obj){
-    if (key.length==5)
+  for (const key in obj){
+    if (key.length === 5)
       result.push(key)
-    if (obj[key].length==5)
+    if (obj[key].length === 5)
       result.push(obj[key])
-
-
     }
   return result;
 }
