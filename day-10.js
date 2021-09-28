@@ -9,8 +9,6 @@ function alienLanguage(str){
 
   return strArr.map(word => word.slice(0, word.length-1) + word[word.length-1].toLowerCase())
   .join(' ');
-  
-  
 }
 
 
