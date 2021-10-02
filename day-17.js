@@ -16,6 +16,16 @@ function countGrade(scores){
   return obj;
 }
 
+function mirrorImage(arr){
+  
+  for(let i = 0; i < arr.length - 1; i++) {
+    let mirr = arr[i].toString().split('').reverse().join('');
+    if(mirr === arr[i+1].toString()) {
+    return [arr[i],arr[i+1]];}
+  }
+  return [-1,-1]
+}
+
 function bigToSmall(arr){
   const res = [];
   arr.forEach(el => res.push(...el)); 
