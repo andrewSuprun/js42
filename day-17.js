@@ -15,3 +15,9 @@ function countGrade(scores){
   })
   return obj;
 }
+
+function bigToSmall(arr){
+  const res = [];
+  arr.forEach(el => res.push(...el)); 
+  return res.sort((a,b)=>b-a).join('>');
+}
